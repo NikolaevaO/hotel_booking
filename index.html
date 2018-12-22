@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="fonts/fontawesome-free-5.6.1-web/css/all.min.css">
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
   <link rel="stylesheet" href="style.css">
   <script>
     var menuVisible = false;
@@ -61,11 +62,40 @@
           <h3>And you are invited.</h3>
         </div>
         <div class="perfection-2"></div>
-        <div class="perfection-3"></div>
-        
+        <div class="perfection-3"></div>  
+      </section>
+      <section class="form">
+          <form action="#">
+            <div><input type="text" class="datepicker" placeholder="Arrival"></div>
+            <div><input type="text" class="datepicker" placeholder="Departure"></div>
+            <div>
+              <input list="room" placeholder="Choose a Room">
+              <datalist id="room">
+                <option label="One" value="One"></option>
+                <option label="Two" value="Two"></option>
+                <option label="Three" value="Three"></option>
+              </datalist>
+            </div>
+            <div>
+              <input list="state" placeholder="State">
+                <datalist id="state">
+                  <option label="CA" value="CA"></option>
+                  <option label="NY" value="NY"></option>
+                  <option label="TX" value="TX"></option>
+                </datalist>
+            </div>
+            <div><input type="submit" value="BOOK NOW"></div>
+          </form>
       </section>
     </main>
     <footer></footer>
   </div>
+  <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $( ".datepicker" ).datepicker();
+    } );
+  </script>
 </body>
 </html>
