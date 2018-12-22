@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url(fonts/bebas-neue-bold.ttf) format('truetype');
+  src: url(fonts/bebas-neue-bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url(fonts/bebas_neue_regular.ttf) format('truetype');
+  src: url(fonts/bebas-neue-regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(fonts/opensans.ttf) format('truetype');
+  src: url(fonts/opensans.woff) format('woff');
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue Bold', sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header {
+  margin: 0 12%;
+  position: relative;
+}
+
+header:after { /*задаем высоту хидеру*/
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  margin-top: 10px;
+}
+
+#menu {
+  float: right;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+#menuButton {
+  font-size: 35px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+#mobileMenu {
+  display: none;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.mobile {
+  position: absolute;
+  top: 43px;
+  right: 0;
+}
+
+#menu li,
+#mobileMenu li {
+  list-style-type: none;
+  text-transform: uppercase;
+  color: #0f0f0f;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  letter-spacing: 1.12px;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu li:not(:first-child) {
+  margin-left: 2vw; /*2% от ширины окна просмотра*/
+}
+
+#menu li a,
+#mobileMenu li a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+#mobileMenu li {
+  border: 1px solid black;
+  line-height: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 0 5px;
+  background-color: #fff;
+}
+
+#mobileMenu li:not(:last-child) {
+  margin-bottom: -1px;
+}
+
+@media (min-width: 721px) {
+  #menuButton {
+    display: none; /*кнопку убираем*/
+  }
+}
+
+@media (max-width: 720px) {
+  #menu {
+    display: none; /*обычное меню убираем*/
+  }
+}
+
+.perfection {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 64% 36%;
+  grid-template-rows: repeat(6, 1fr);
+  line-height: 1;
+}
+
+.perfection-1,
+.perfection-2,
+.perfection-3 {
+  width: 100%;
+   /*сохраняем пропорции картинок, оставляем место для заголовка*/
+}
+.perfection-1 {
+  background: url(image/perfection-1.jpg) top/contain no-repeat;
+  grid-row: 1/6; /*задаем кол-во строк в гриде*/
+  padding-top: calc(61% - 112px);
+}
+
+@media (min-width: 721px) and (max-width: 992px) {
+  .perfection-1 {
+    padding-top: calc(61% - 72px);
+  }
+}
+
+@media (min-width: 461px) and (max-width: 720px) {
+  .perfection-1 {
+    padding-top: calc(61% - 48px);
+  }  
+}
+
+@media (max-width: 460px) {
+  .perfection-1 {
+    padding-top: calc(61% - 36px);
+  }  
+}
+
+.perfection-2 {
+  background: url(image/perfection-2.jpg) top/contain no-repeat;
+  grid-row: 1/4;
+  padding-top: 67%;
+}
+
+.perfection-3 {
+  background: url(image/perfection-3.jpg) top/contain no-repeat;
+  grid-row: 4/7;
+  padding-top: 67%;
+}
+
+.perfection h2 {
+  font-size: 112px;
+  margin-left: 150px;
+  color: #fff;
+}
+
+.perfection h3 {
+  font-size: 70px;
+  margin-left: 150px;
+}
+
+@media (min-width: 721px) and (max-width: 992px) {
+  .perfection h2 {
+    font-size: 72px;
+    margin-left: 100px;
+  }
+  .perfection h3 {
+    font-size: 48px;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 720px) {
+  .perfection h2 {
+    font-size: 48px;
+    margin-left: 20px;
+  }
+  .perfection h3 {
+    font-size: 36px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .perfection h2 {
+    font-size: 36px;
+    margin-left: 10px;
+  }
+  .perfection h3 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+}
