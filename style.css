@@ -227,22 +227,23 @@ header:after { /*задаем высоту хидеру*/
   display: grid;
   grid-template-columns: repeat(4, 1fr) 167px;
   grid-gap: 15px;
-  max-width: 1141px;
+  max-width: 1075px;
   background-color: #1c1c1c;
-  margin: 0 auto;
+  margin: 55px auto;
   padding: 32px 33px;
   border-bottom:#4e26fd 11px solid;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   .form form {
     grid-template-columns: 1fr;
   }
 }
 
-@media (min-width: 481px) and (max-width: 750px) {
+@media (min-width: 651px) and (max-width: 920px) {
   .form form {
     grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
   }
   .form div:last-child {
     grid-column: 2/4;
@@ -257,7 +258,7 @@ header:after { /*задаем высоту хидеру*/
   border: none;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1.02px;
-  color: #000000;
+  color: #000;
   cursor: pointer;
 }
 
@@ -273,4 +274,94 @@ header:after { /*задаем высоту хидеру*/
 
 .form input::placeholder {
   padding: 0 20px;
+}
+
+.hotel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1141px;
+  margin: 42px auto;
+  grid-gap: 2.7%;
+}
+
+.hotel div figure {
+  text-align: center;
+}
+
+.hotel div figure img {
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (min-width: 481px) and (max-width: 920px) {
+  .hotel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.winningHotels h3 {
+  color: #000000;
+  font-size: 55px;
+  letter-spacing: 3.3px;
+  text-align: center;
+}
+
+.hotel figcaption {
+  color: #010101;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  margin-bottom: 18px;
+  margin-top: 33px;
+}
+
+.hotel figure p {
+  margin-bottom: 44px;
+}
+
+@media (max-width: 920px) {
+  .hotel figure p {
+    margin-bottom: 0;
+  }
+  .hotel figcaption {
+    margin-top: 15px; 
+  }
+}
+
+@media (max-width: 920px) {
+  .hotel {
+    grid-gap: 25px;
+  }
+}
+
+.hotel figure a img {
+  background: url(image/back-small.png) no-repeat;
+}
+
+.hotel figure a img:hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.more {
+  text-align: center;
+  margin-top: -4px;
+}
+
+.more a {
+  text-decoration: none;
+  color: #4e26fd;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 1.44px;
+  border: 2px solid #0000ff;
+  line-height: 48px;
+  padding: 11px 60px;
 }
