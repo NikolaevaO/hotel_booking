@@ -132,9 +132,10 @@ header:after { /*задаем высоту хидеру*/
 
 .perfection {
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: column; /*автоматически располагает контент по столбцам*/
   grid-template-columns: 64% 36%;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr); /*все дивы внутри дива с гридом располагаем на 6 строках,
+  размером по 1 фракции каждая */
   line-height: 1;
 }
 
@@ -169,7 +170,7 @@ header:after { /*задаем высоту хидеру*/
 
 .perfection-2 {
   background: url(image/perfection-2.jpg) top/contain no-repeat;
-  grid-row: 1/4;
+  grid-row: 1/4; /*элемент располагаем с 1 по 4 строки сетки, включая 1 строку, но не включая 4-ю*/
   padding-top: 67%;
 }
 
@@ -284,7 +285,8 @@ header:after { /*задаем высоту хидеру*/
   grid-gap: 2.7%;
 }
 
-.hotel div figure {
+.hotel figure,
+.hotel p {
   text-align: center;
 }
 
@@ -321,12 +323,12 @@ header:after { /*задаем высоту хидеру*/
   margin-top: 33px;
 }
 
-.hotel figure p {
+.hotel p {
   margin-bottom: 44px;
 }
 
 @media (max-width: 920px) {
-  .hotel figure p {
+  .hotel p {
     margin-bottom: 0;
   }
   .hotel figcaption {
@@ -340,12 +342,7 @@ header:after { /*задаем высоту хидеру*/
   }
 }
 
-.hotel figure a img {
-  background: url(image/back-small.png) no-repeat;
-}
-
 .hotel figure a img:hover {
-  cursor: pointer;
   opacity: 0.2;
 }
 
@@ -364,4 +361,151 @@ header:after { /*задаем высоту хидеру*/
   border: 2px solid #0000ff;
   line-height: 48px;
   padding: 11px 60px;
+}
+
+.winter {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: hidden;
+}
+
+@media (max-width: 920px) {
+  .winter {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+
+.winter > div {
+  background-color: #1c1c1c;
+  position: relative;
+  width: 100%;
+  padding-top: 198%;
+  overflow: hidden;
+}
+
+@media (max-width: 920px) {
+  .winter > div {
+    background-color: initial;
+    position: static;
+    padding: 0;
+    overflow: initial;
+  }
+}
+
+.winter a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 0px;
+}
+
+@media (max-width: 920px) {
+  .winter a {
+    position: static;
+    color: #000;
+  }
+}
+
+.winter img {
+  object-fit: contain; /*помещает изображение в контейнер выбранного размера */
+  width: 100%;
+  display: block;
+  margin-bottom: -154px;
+}
+
+@media (max-width: 920px) {
+  .winter img {
+    display: block;
+    max-width: 50%;
+    float: left;
+    object-fit: cover;
+    margin-bottom: 0;
+    width: 220px;
+    height: 350px;
+  }
+}
+
+.winter img:hover {
+  mix-blend-mode: overlay;
+  margin-bottom: -245px;
+  transition: 0.5s;
+}
+
+@media (max-width: 920px) {
+  .winter img:hover {
+    margin-bottom: 0;
+    mix-blend-mode: unset;
+  }
+}
+
+.text {
+  margin-left: 10%;
+  width: 83%;
+}
+
+.text h3 {
+  font-size: 60px;
+  line-height: 100px;
+}
+
+.text p {
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+
+@media (min-width: 551px) and (max-width: 920px) {
+  .text {
+    margin-top: 30px;
+    margin-left: 5%;
+    width: 55%;
+    display: inline-block;
+    text-align: center;
+  }
+  .text h3 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 550px) {
+  .text {
+    margin: 0;
+    max-width: 50%;
+    display: inline-block;
+    text-align: center;
+  }
+  .text h3 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1222px) {
+  .text {
+    margin-left: 3%;
+    width: 94%;
+  }
+  .text h3 {
+    font-size: 34px;
+    line-height: 45px;
+  }
+  .text p {
+    line-height: normal;
+  }
+}
+
+.winterActivities h2 {
+  font-size: 80px;
+  letter-spacing: 2.51px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 920px) {
+  .winterActivities h2 {
+    font-size: 48px;
+    margin-top: 50px;
+  }
 }
