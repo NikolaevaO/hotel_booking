@@ -586,6 +586,67 @@ figure img {
   transition: 0.5s;
 }
 
+.weather {
+  background: url(image/weather.jpg) 100% 100% no-repeat;
+  padding-top: 37%;
+  position: relative;
+  width: 100%;
+}
+
+.weather > div {
+  position: absolute;
+  top: 20%;
+  left: 55%;
+}
+
+.weather h1 {
+  text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  font-size: 130px;
+  line-height: 103px;
+  letter-spacing: 2.75px;
+  padding-bottom: 37px;
+}
+
+.weather p {
+  max-width: 471px;
+  text-shadow: 1px 3px 0 #000000;
+  color: #ffffff;
+  line-height: 1.5em;
+  letter-spacing: 0.64px;
+}
+
+.blueButton {
+  margin-top: 43px;
+  text-align: unset;
+}
+
+.blueButton a {
+  color: #fff;
+  background-color: #0000ff;
+}
+
+@media (max-width: 1350px) {
+  .weather {
+    text-align: center;
+    margin-top: 5%;
+  }
+  .weather > div {
+    left: 36%;
+  }
+  .weather p {
+    font-size: 14px;
+  }
+  .weather h1 {
+    font-size: 65px;
+    line-height: 65px;
+    padding-bottom: 19px;
+  }
+  .blueButton {
+      margin-top: 37px;
+  }
+}
+
 footer {
   margin-top: 80px;
   background-color: #252525;
