@@ -290,7 +290,7 @@ header:after { /*задаем высоту хидеру*/
   text-align: center;
 }
 
-.hotel div figure img {
+figure img {
   object-fit: contain;
   width: 100%;
 }
@@ -495,7 +495,8 @@ header:after { /*задаем высоту хидеру*/
   }
 }
 
-.winterActivities h2 {
+.winterActivities h2,
+.deluxeRooms h2 {
   font-size: 80px;
   letter-spacing: 2.51px;
   text-align: center;
@@ -509,3 +510,54 @@ header:after { /*задаем высоту хидеру*/
     margin-top: 50px;
   }
 }
+
+.deluxe {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: 260px 260px;
+  max-width: 1141px;
+  margin: 70px auto;
+  grid-gap: 2.7%;
+}
+
+.room-3 {
+  grid-column: 2/2;
+  grid-row: 1/3;
+}
+
+.deluxe figcaption {
+  color: #010101;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.deluxe div {
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/*.deluxe img:hover {
+  mix-blend-mode: overlay;
+  margin-bottom: -196px;
+  transition: 0.5s;
+}*/
+
+.deluxe > div img:hover {
+  mix-blend-mode: overlay;
+  margin-bottom: -190px;
+  transition: 0.8s;
+}
+
+footer {
+  margin-top: 80px;
+  background-color: #252525;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+ 
