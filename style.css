@@ -277,7 +277,8 @@ header:after { /*задаем высоту хидеру*/
   padding: 0 20px;
 }
 
-.hotel {
+.hotel,
+.ourNews{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 1141px;
@@ -320,7 +321,8 @@ figure img {
   }
 }
 
-.hotel figcaption {
+.hotel figcaption,
+.ourNews figcaption {
   color: #010101;
   font-weight: 700;
   line-height: 24px;
@@ -329,7 +331,8 @@ figure img {
   margin-top: 33px;
 }
 
-.hotel p {
+.hotel p,
+.ourNews p {
   margin-bottom: 44px;
 }
 
@@ -502,7 +505,8 @@ figure img {
 }
 
 .winterActivities h2,
-.deluxeRooms h2 {
+.deluxeRooms h2,
+.news h2 {
   font-size: 80px;
   letter-spacing: 2.51px;
   text-align: center;
@@ -512,16 +516,23 @@ figure img {
 
 @media (max-width: 920px) {
   .winterActivities h2,
-  .deluxeRooms h2 {
+  .deluxeRooms h2,
+  .news h2 {
     font-size: 48px;
     margin-top: 50px;
   }
 }
 
 @media (max-width: 461px) {
-.winterActivities h2 {
+  .winterActivities h2,
+  .deluxeRooms h2,
+  .news h2 {
     font-size: 36px;
   }
+  .news h2 {
+    margin-top: 85px;
+  }
+
 }
 
 .deluxe {
@@ -535,9 +546,14 @@ figure img {
 
 @media (max-width: 920px) {
   .deluxe {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.5fr;
     grid-gap: 2px;
     grid-template-rows: auto;
+  }
+}
+@media (max-width: 920px) {
+.deluxe figcaption {
+  padding-top: 4%;
   }
 }
 
@@ -553,7 +569,8 @@ figure img {
   }
 }
 
-.deluxe figcaption {
+.deluxe figcaption,
+.ourNews figcaption {
   font-weight: 700;
   letter-spacing: 0.64px;
   margin-bottom: 4px;
@@ -569,28 +586,20 @@ figure img {
 }
 
 .deluxe figcaption,
-.deluxe p {
-  line-height: 24px;
+.deluxe p,
+.ourNews figcaption,
+.ourNews p {
+  line-height: 22px;
   color: #010101;
 }
 
 @media (max-width: 961px) {
   .deluxe figcaption,
-  .deluxe p {
+  .deluxe p,
+  .ourNews figcaption,
+  .ourNews p {
     font-size: 11px;
-    line-height: 14px;
-  }
-}
-
-@media (max-width: 961px) {
-  .deluxe figcaption {
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 461px) {
-  .deluxeRooms h2 {
-    font-size: 36px;
+    line-height: 15px;
   }
 }
 
@@ -608,13 +617,14 @@ figure img {
 .weather {
   background: url(image/weather.jpg) 100% 100% no-repeat;
   padding-top: 37%;
+  margin-top: 6.6%;
   position: relative;
   width: 100%;
 }
 
 .weather > div {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 55%;
 }
 
@@ -636,7 +646,7 @@ figure img {
 }
 
 .blueButton {
-  margin-top: 43px;
+  margin-top: 40px;
   text-align: unset;
 }
 
@@ -741,14 +751,15 @@ figure img {
     grid-area: header;
     font-size: 35px;
     line-height: 38px;
+    margin-top: 3%;
   }
   .weather p {
     grid-area: paragraph;
-    margin-top: 5%;
+    margin-top: 7%;
   }
   .blueButton {
     grid-area: button;
-    margin-top: 6%;
+    margin-top: 11%;
   }
   .weather {
     margin-top: 17%;
@@ -761,6 +772,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 40px;
+  margin-top: 6.6%;
 }
 
  
