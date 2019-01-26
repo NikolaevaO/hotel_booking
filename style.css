@@ -657,11 +657,26 @@ figure img {
 }
 
 .weather {
-  background: url(image/weather.jpg) 100% 100% no-repeat;
   padding-top: 37%;
   margin-top: 6.6%;
   position: relative;
   width: 100%;
+  animation: winterWeather 15s ease-in-out infinite both;
+}
+
+@keyframes winterWeather {
+  0% {
+    background: url(image/weather.jpg) center bottom no-repeat;
+  }
+  33% {
+    background: url(image/weather-1.jpg) center bottom no-repeat;
+  }
+  66% {
+    background: url(image/weather-2.jpg) center bottom no-repeat;
+  }
+  100% {
+    background: url(image/weather.jpg) center bottom no-repeat;
+  }
 }
 
 .weather > div {
@@ -672,7 +687,7 @@ figure img {
 
 .weather h1 {
   text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.35);
-  color: #ffffff;
+  color: #fff;
   font-size: 130px;
   line-height: 103px;
   letter-spacing: 2.75px;
@@ -681,8 +696,8 @@ figure img {
 
 .weather p {
   max-width: 471px;
-  text-shadow: 1px 3px 0 #000000;
-  color: #ffffff;
+  text-shadow: 1px 3px 0 #000;
+  color: #fff;
   line-height: 1.5em;
   letter-spacing: 0.64px;
 }
