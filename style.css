@@ -291,7 +291,7 @@ header:after { /*задаем высоту хидеру*/
 
 .form input[type="submit"]:hover {
   background: #61cdee;
-  box-shadow: 0 7px 20px #333333;
+  box-shadow: 0 10px 25px #612592;
   transform: scale(1.15);
 }
 
@@ -381,11 +381,13 @@ figure img {
 .more {
   width: 170px;
   margin: 0 auto;
-  transition-duration: .5s;
 }
 
-.more:hover {
+.more:hover a {
   transform: perspective(800px) translateZ(90px);
+  background: #61cdee;
+  border: 2px solid #167998;
+  box-shadow: 0 15px 20px #333333; /*оттеняем кнопку при наведении мыши*/
 }
 
 .more a {
@@ -398,12 +400,7 @@ figure img {
   border: 2px solid #0000ff;
   line-height: 48px;
   padding: 11px 60px;
-}
-
-.more a:hover {
-  background: #61cdee;
-  border: 1px solid #167998;
-  box-shadow: 0 9px 10px #333333; /*оттеняем кнопку при наведении мыши*/
+  transition-duration: .5s;
 }
 
 .winter {
@@ -645,15 +642,12 @@ figure img {
   perspective: 300px;
 }
 
-.deluxe > div img {
-  transition-duration: .5s;
-}
-
 .deluxe > div:hover img {
   opacity: 0.2;
   margin-bottom: -188px;
   transform: rotateX(-80deg);
   transform-origin: top;
+  transition-duration: 1s;
 }
 
 .weather {
